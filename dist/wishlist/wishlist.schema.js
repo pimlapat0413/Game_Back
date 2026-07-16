@@ -21,7 +21,6 @@ let WishlistItem = class WishlistItem {
     genres;
     developer;
     shortDescription;
-    targetPrice;
     currency;
 };
 exports.WishlistItem = WishlistItem;
@@ -61,10 +60,6 @@ __decorate([
     (0, mongoose_1.Prop)(),
     __metadata("design:type", String)
 ], WishlistItem.prototype, "shortDescription", void 0);
-__decorate([
-    (0, mongoose_1.Prop)({ type: Number, default: null }),
-    __metadata("design:type", Object)
-], WishlistItem.prototype, "targetPrice", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ default: 'THB' }),
     __metadata("design:type", String)

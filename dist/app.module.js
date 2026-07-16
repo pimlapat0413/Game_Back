@@ -13,7 +13,6 @@ const mongoose_1 = require("@nestjs/mongoose");
 const schedule_1 = require("@nestjs/schedule");
 const games_module_1 = require("./games/games.module");
 const wishlist_module_1 = require("./wishlist/wishlist.module");
-const notifications_module_1 = require("./notifications/notifications.module");
 const scheduler_module_1 = require("./scheduler/scheduler.module");
 let AppModule = class AppModule {
 };
@@ -26,7 +25,6 @@ exports.AppModule = AppModule = __decorate([
             schedule_1.ScheduleModule.forRoot(),
             games_module_1.GamesModule,
             wishlist_module_1.WishlistModule,
-            notifications_module_1.NotificationsModule,
             scheduler_module_1.SchedulerModule,
         ],
     })

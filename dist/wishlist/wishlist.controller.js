@@ -33,9 +33,6 @@ let WishlistController = class WishlistController {
     remove(appid) {
         return this.wishlistService.remove(appid);
     }
-    updateTargetPrice(appid, dto) {
-        return this.wishlistService.updateTargetPrice(appid, dto);
-    }
 };
 exports.WishlistController = WishlistController;
 __decorate([
@@ -65,14 +62,6 @@ __decorate([
     __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", void 0)
 ], WishlistController.prototype, "remove", null);
-__decorate([
-    (0, common_1.Patch)(':appid/target-price'),
-    __param(0, (0, common_1.Param)('appid', common_1.ParseIntPipe)),
-    __param(1, (0, common_1.Body)()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Number, wishlist_dto_1.UpdateTargetPriceDto]),
-    __metadata("design:returntype", void 0)
-], WishlistController.prototype, "updateTargetPrice", null);
 exports.WishlistController = WishlistController = __decorate([
     (0, common_1.Controller)('wishlist'),
     __metadata("design:paramtypes", [wishlist_service_1.WishlistService])

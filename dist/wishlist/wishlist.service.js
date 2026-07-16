@@ -43,14 +43,6 @@ let WishlistService = class WishlistService {
         }
         return { deleted: true };
     }
-    async updateTargetPrice(appid, dto) {
-        const item = await this.wishlistModel
-            .findOneAndUpdate({ appid }, { targetPrice: dto.targetPrice }, { new: true })
-            .exec();
-        if (!item)
-            throw new common_1.NotFoundException(`Game appid ${appid} not found`);
-        return item;
-    }
     async updatePrice(appid, currentPrice, discountPercent) {
         await this.wishlistModel
             .findOneAndUpdate({ appid }, { currentPrice, discountPercent })

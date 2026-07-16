@@ -8,8 +8,4 @@ export declare class AddWishlistDto {
     genres?: string[];
     developer?: string;
     shortDescription?: string;
-    targetPrice?: number;
-}
-export declare class UpdateTargetPriceDto {
-    targetPrice: number | null;
 }

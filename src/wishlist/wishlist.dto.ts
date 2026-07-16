@@ -34,14 +34,5 @@ export class AddWishlistDto {
   @IsOptional()
   @IsString()
   shortDescription?: string;
-
-  @IsOptional()
-  @IsNumber()
-  targetPrice?: number;
 }
 
-export class UpdateTargetPriceDto {
-  @IsOptional()
-  @IsNumber()
-  targetPrice: number | null;
-}

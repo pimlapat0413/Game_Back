@@ -32,11 +32,9 @@ export class WishlistItem {
   @Prop()
   shortDescription: string;
 
-  @Prop({ type: Number, default: null })
-  targetPrice: number | null;
-
   @Prop({ default: 'THB' })
   currency: string;
 }
 
 export const WishlistItemSchema = SchemaFactory.createForClass(WishlistItem);
+

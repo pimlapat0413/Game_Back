@@ -11,13 +11,12 @@ const common_1 = require("@nestjs/common");
 const scheduler_service_1 = require("./scheduler.service");
 const wishlist_module_1 = require("../wishlist/wishlist.module");
 const games_module_1 = require("../games/games.module");
-const notifications_module_1 = require("../notifications/notifications.module");
 let SchedulerModule = class SchedulerModule {
 };
 exports.SchedulerModule = SchedulerModule;
 exports.SchedulerModule = SchedulerModule = __decorate([
     (0, common_1.Module)({
-        imports: [wishlist_module_1.WishlistModule, games_module_1.GamesModule, notifications_module_1.NotificationsModule],
+        imports: [wishlist_module_1.WishlistModule, games_module_1.GamesModule],
         providers: [scheduler_service_1.SchedulerService],
     })
 ], SchedulerModule);

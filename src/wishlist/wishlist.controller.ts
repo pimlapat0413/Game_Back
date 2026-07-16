@@ -1,8 +1,8 @@
 import {
-  Controller, Get, Post, Delete, Patch, Param, Body, ParseIntPipe,
+  Controller, Get, Post, Delete, Param, Body, ParseIntPipe,
 } from '@nestjs/common';
 import { WishlistService } from './wishlist.service';
-import { AddWishlistDto, UpdateTargetPriceDto } from './wishlist.dto';
+import { AddWishlistDto } from './wishlist.dto';
 
 @Controller('wishlist')
 export class WishlistController {
@@ -27,12 +27,5 @@ export class WishlistController {
   remove(@Param('appid', ParseIntPipe) appid: number) {
     return this.wishlistService.remove(appid);
   }
-
-  @Patch(':appid/target-price')
-  updateTargetPrice(
-    @Param('appid', ParseIntPipe) appid: number,
-    @Body() dto: UpdateTargetPriceDto,
-  ) {
-    return this.wishlistService.updateTargetPrice(appid, dto);
-  }
 }
+

@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.UpdateTargetPriceDto = exports.AddWishlistDto = void 0;
+exports.AddWishlistDto = void 0;
 const class_validator_1 = require("class-validator");
 class AddWishlistDto {
     appid;
@@ -21,7 +21,6 @@ class AddWishlistDto {
     genres;
     developer;
     shortDescription;
-    targetPrice;
 }
 exports.AddWishlistDto = AddWishlistDto;
 __decorate([
@@ -67,18 +66,4 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], AddWishlistDto.prototype, "shortDescription", void 0);
-__decorate([
-    (0, class_validator_1.IsOptional)(),
-    (0, class_validator_1.IsNumber)(),
-    __metadata("design:type", Number)
-], AddWishlistDto.prototype, "targetPrice", void 0);
-class UpdateTargetPriceDto {
-    targetPrice;
-}
-exports.UpdateTargetPriceDto = UpdateTargetPriceDto;
-__decorate([
-    (0, class_validator_1.IsOptional)(),
-    (0, class_validator_1.IsNumber)(),
-    __metadata("design:type", Object)
-], UpdateTargetPriceDto.prototype, "targetPrice", void 0);
 //# sourceMappingURL=wishlist.dto.js.map

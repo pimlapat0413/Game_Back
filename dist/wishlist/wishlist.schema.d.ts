@@ -10,7 +10,6 @@ export declare class WishlistItem {
     genres: string[];
     developer: string;
     shortDescription: string;
-    targetPrice: number | null;
     currency: string;
 }
 export declare const WishlistItemSchema: import("mongoose").Schema<WishlistItem, import("mongoose").Model<WishlistItem, any, any, any, any, any, WishlistItem>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, WishlistItem, Document<unknown, {}, WishlistItem, {
@@ -95,15 +94,6 @@ export declare const WishlistItemSchema: import("mongoose").Schema<WishlistItem,
         id: string;
     }>> | undefined;
     shortDescription?: import("mongoose").SchemaDefinitionProperty<string, WishlistItem, Document<unknown, {}, WishlistItem, {
-        id: string;
-    }, import("mongoose").DefaultSchemaOptions> & Omit<WishlistItem & {
-        _id: import("mongoose").Types.ObjectId;
-    } & {
-        __v: number;
-    }, "id"> & import("mongoose").HydratedDocumentOverrides<{
-        id: string;
-    }>> | undefined;
-    targetPrice?: import("mongoose").SchemaDefinitionProperty<number | null, WishlistItem, Document<unknown, {}, WishlistItem, {
         id: string;
     }, import("mongoose").DefaultSchemaOptions> & Omit<WishlistItem & {
         _id: import("mongoose").Types.ObjectId;

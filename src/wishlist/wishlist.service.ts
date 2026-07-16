@@ -2,7 +2,7 @@ import { Injectable, NotFoundException, ConflictException } from '@nestjs/common
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { WishlistItem, WishlistDocument } from './wishlist.schema';
-import { AddWishlistDto, UpdateTargetPriceDto } from './wishlist.dto';
+import { AddWishlistDto } from './wishlist.dto';
 
 @Injectable()
 export class WishlistService {
@@ -36,14 +36,6 @@ export class WishlistService {
     return { deleted: true };
   }
 
-  async updateTargetPrice(appid: number, dto: UpdateTargetPriceDto): Promise<WishlistDocument> {
-    const item = await this.wishlistModel
-      .findOneAndUpdate({ appid }, { targetPrice: dto.targetPrice }, { new: true })
-      .exec();
-    if (!item) throw new NotFoundException(`Game appid ${appid} not found`);
-    return item;
-  }
-
   async updatePrice(appid: number, currentPrice: number, discountPercent: number): Promise<void> {
     await this.wishlistModel
       .findOneAndUpdate({ appid }, { currentPrice, discountPercent })
@@ -55,3 +47,4 @@ export class WishlistService {
     return items.map((i) => i.appid);
   }
 }
+

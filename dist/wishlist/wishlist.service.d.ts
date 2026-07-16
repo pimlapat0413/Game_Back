@@ -1,6 +1,6 @@
 import { Model } from 'mongoose';
 import { WishlistDocument } from './wishlist.schema';
-import { AddWishlistDto, UpdateTargetPriceDto } from './wishlist.dto';
+import { AddWishlistDto } from './wishlist.dto';
 export declare class WishlistService {
     private wishlistModel;
     constructor(wishlistModel: Model<WishlistDocument>);
@@ -10,7 +10,6 @@ export declare class WishlistService {
     remove(appid: number): Promise<{
         deleted: boolean;
     }>;
-    updateTargetPrice(appid: number, dto: UpdateTargetPriceDto): Promise<WishlistDocument>;
     updatePrice(appid: number, currentPrice: number, discountPercent: number): Promise<void>;
     getWishlistAppids(): Promise<number[]>;
 }
